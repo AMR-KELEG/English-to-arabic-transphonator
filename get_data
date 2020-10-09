@@ -1,0 +1,5 @@
+# Download the data from CMU site
+wget http://svn.code.sf.net/p/cmusphinx/code/trunk/cmudict/cmudict-0.7b -O cmudict.tmp
+mkdir data -p
+tail -n +57 cmudict.tmp | sed -e "s/([0-9])//" > data/cmudict
+rm cmudict.tmp
