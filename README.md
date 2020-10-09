@@ -6,3 +6,24 @@
 - The Carnegie Mellon University is maintaining a dictionary mapping English words to the way they are pronunced (Using the [`ARPAbet`](https://en.wikipedia.org/wiki/ARPABET) symbol set which is somehow related to [`IPA`](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet).
 	- "The Carnegie Mellon University Pronouncing Dictionary is an open-source machine-readable pronunciation dictionary for North American English that contains over 134,000 words and their pronunciations. CMUdict is being actively maintained and expanded. We are open to suggestions, corrections and other input."
 	- For more details, check the [dictionary's webpage](http://www.speech.cs.cmu.edu/cgi-bin/cmudict)
+
+## Usage
+- Download the CMU dictionary by using:
+`./get_data`
+
+- Open a python shell and use it as follows
+```
+from transphonator import Transphonator
+
+words = "This is awesome".split()
+trans = Transphonator()
+for word in words:
+    print(word, trans.transphonate_english_word(word))
+```
+
+The output for the sentence `This is awesome` is:
+```
+this ذِيس
+is إيز
+awesome أوسَام
+```
