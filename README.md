@@ -9,11 +9,11 @@
 
 ## Usage
 - Download the CMU dictionary by using:
-`./get_data`
+`pip install english_to_arabic_transphonator`
 
-- Open a python shell and use it as follows
+- Use a `Transphonator` object
 ```
-from transphonator import Transphonator
+from english_to_arabic_transphonator.transphonator import Transphonator
 
 words = "This is awesome".split()
 trans = Transphonator()
@@ -27,3 +27,4 @@ this ذِيس
 is إيز
 awesome أوسَام
 ```
+
