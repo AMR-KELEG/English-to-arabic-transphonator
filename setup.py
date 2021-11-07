@@ -2,8 +2,9 @@ import setuptools
 
 setuptools.setup(
 	name='english_to_arabic_transphonator',
-	version='0.0.0.1',
+	version='0.0.0.2',
 	description='Transphonate English words using Arabic script',
+	url='https://github.com/AMR-KELEG/English-to-arabic-transphonator',
 	author='Amr Keleg',
 	author_email='amr_mohamed@live.com',
 	license='GPLv3',
