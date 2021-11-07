@@ -1,4 +1,5 @@
 import re
+import pkg_resources
 
 
 class Transphonator:
@@ -18,8 +19,8 @@ class Transphonator:
         }
 
         # TODO: Make sure the file is there before loading it
-        with open("data/cmudict", "r", encoding="ISO-8859-1") as f:
-            lines = [l.strip() for l in f.readlines()]
+        with open(pkg_resources.resource_filename("data", "cmudict-0.7b.txt"), "r", encoding="ISO-8859-1") as f:
+            lines = [re.sub(r"[0-9]", "", l.strip()) for l in f if not l.startswith(";;;")]
             words = [l.split()[0] for l in lines]
             phonemes = [l.split()[1:] for l in lines]
         self.english_word_to_phoneme = {w.lower():p for w, p in zip(words, phonemes)}
