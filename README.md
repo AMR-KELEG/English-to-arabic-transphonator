@@ -8,7 +8,7 @@
 	- For more details, check the [dictionary's webpage](http://www.speech.cs.cmu.edu/cgi-bin/cmudict)
 
 ## Usage
-- Download the CMU dictionary by using:
+- Install the package from pip
 `pip install english_to_arabic_transphonator`
 
 - Use a `Transphonator` object
