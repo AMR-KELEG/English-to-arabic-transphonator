@@ -39,6 +39,9 @@ class Transphonator:
         )
         return self.transliteration_map[available_phonemes[max_idx]]
 
+    def transphonate_english_sentence(self, english_sentance):
+        return " ".join([self.transphonate_english_word(word) for word in english_sentance.split()])
+    
     def transphonate_english_word(self, english_word):
         english_word = english_word.lower()
         if english_word in self.english_word_to_phoneme:
